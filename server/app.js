@@ -1,12 +1,16 @@
+require('dotenv').config();
+
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
 const schema = require('./shema.js');
 const mongoose = require('mongoose');
 
+const MONGO_CONNECT = process.env.MONGO_CONNECT;
+
 const app = express();
 const PORT = 5005;
 
-mongoose.connect('mongodb+srv://dallas:fidelio1324@cluster0-3rgg2.mongodb.net/graphQL?retryWrites=true&w=majority', { useNewUrlParser: true});
+mongoose.connect(`mongodb+srv://${MONGO_CONNECT}`, { useNewUrlParser: true});
 
 app.use('/graphql', graphqlHTTP({
     schema,
