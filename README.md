@@ -1,4 +1,4 @@
-#GraphQL  (server + client app)
+# GraphQL  (server + client app)
 
 ### Зависимости : `yarn install`
 
