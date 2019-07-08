@@ -11,6 +11,5 @@
         production - yarn build
 
 ## TODO 
-        - Настроить линтер
         - Подключить Apollo
         - Material UI
